@@ -7,7 +7,7 @@
 }
 
 @font-face {
-    font-family: "Metal Mania";
+    font-family: "Actor";
     src:         url("../assets/fonts/Actor-Regular.ttf");
     font-weight: 400;
     font-style:  normal;
@@ -31,8 +31,25 @@
     border:           1px solid #D9C279;
     font-size:        16px;
     background-color: rgba(#1D1D1D, 0.6);
+    font-family:      'Actor', serif;
 }
 
 .layoutTabs-active {
     box-shadow: 0.3em 0 .4em #D9C279;
+}
+
+.main-layout {
+    background-image: url("../assets/img/MainBackground.jpg");
+    background-size:  cover;
+}
+
+footer {
+    font-family: 'Actor', serif;
+    color:       white;
+    font-size:   12px;
+    text-decoration: underline solid;
+}
+
+.q-tab > .q-tab__indicator {
+    display: none
 }
