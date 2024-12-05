@@ -80,10 +80,14 @@ footer {
 }
 
 .bottom {
-    position: relative;
+    position: inherit;
     bottom:   0;
     left:     0;
     right:    0;
+}
+
+.filmTabsContainer {
+    margin-bottom: 60px;
 }
 
 .filmTabs {
@@ -127,4 +131,20 @@ footer {
     margin:         35px;
     padding-right:  60px;
     letter-spacing: 1px;
+}
+
+.photo-container {
+    justify-content: right;
+    display: grid;
+    align-content: center;
+    padding-right: 60px;
+}
+
+.info-actor {
+    font-family:    Actor, serif;
+    font-size:      16px;
+    color:          white;
+    line-height:    19.25px;
+    margin:         35px;
+    padding-right:  60px;
 }

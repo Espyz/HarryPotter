@@ -12,7 +12,7 @@
     <FooterDefault>
         <div>
             <q-tabs
-                class="full-width q-ma-lg"
+                class="full-width q-ma-lg filmTabsContainer"
                 @update:model-value="openVideo"
                 outside-arrows
                 mobile-arrows
