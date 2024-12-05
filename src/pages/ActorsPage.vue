@@ -16,13 +16,16 @@
                 {{ actor.info }}
             </div>
         </div>
+        <BackToMain/>
     </FooterDefault>
 </template>
 <script>
 import FooterDefault from '../components/FooterDefault.vue';
+import BackToMain from '../components/BackToMain.vue';
 
 export default {
     components: {
+        BackToMain,
         FooterDefault,
     },
     

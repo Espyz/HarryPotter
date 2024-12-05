@@ -131,20 +131,90 @@ footer {
     margin:         35px;
     padding-right:  60px;
     letter-spacing: 1px;
+    height:         inherit;
 }
 
 .photo-container {
     justify-content: right;
-    display: grid;
-    align-content: center;
-    padding-right: 60px;
+    display:         grid;
+    align-content:   center;
+    padding-right:   60px;
 }
 
 .info-actor {
+    font-family:   Actor, serif;
+    font-size:     16px;
+    color:         white;
+    line-height:   19.25px;
+    margin:        35px;
+    padding-right: 60px;
+}
+
+.info-film-tab {
+    border:    1px solid white;
+    max-width: 257px;
+    margin:    20px 60px;
+
+    &.active {
+        border: 1px solid #D9C279;
+    }
+}
+
+.info-film-tab .q-tab__label {
+    text-align:     center;
+    line-height:    21.65px;
+    font-size:      18px;
     font-family:    Actor, serif;
-    font-size:      16px;
     color:          white;
-    line-height:    19.25px;
-    margin:         35px;
+    padding:        0 20px;
+    text-transform: none;
+    white-space:    pre-wrap;
+}
+
+.info-film-tab.active .q-tab__label {
+    color:       #D9C279;
+    text-shadow: #D9C279;
+}
+
+.header {
+    font-family:    Actor, serif;
+    font-size:      22px;
+    color:          white;
+    line-height:    26.47px;
+    margin-top:     31px;
     padding-right:  60px;
+    letter-spacing: 1px;
+}
+
+.info-table {
+    font-family:    Actor, serif;
+    font-size:      18px;
+    line-height:    21.65px;
+    color:          white;
+    padding-right:  60px;
+    letter-spacing: 1px;
+}
+
+.info-table .row {
+    margin: 20px 0;
+}
+
+.back-button-container {
+    display:         flex;
+    justify-content: right;
+    position:        relative;
+    bottom:          30px;
+}
+
+.back-button {
+    cursor:       pointer;
+    font-family:  Actor, serif;
+    font-size:    18px;
+    line-height:  21.65px;
+    color:        #D9C279;
+    margin-right: 60px;
+}
+
+.h-inherit {
+    height: inherit;
 }

@@ -11,14 +11,16 @@
                 <li>«Weird Sisters – ночная рок-мелодия, под которую танцевали на Святочном балу.</li>
             </ul>
         </div>
+        <BackToMain/>
     </FooterDefault>
 </template>
 
 <script>
 
 import FooterDefault from '../components/FooterDefault.vue';
+import BackToMain from '../components/BackToMain.vue';
 
 export default {
-    components: { FooterDefault },
+    components: { BackToMain, FooterDefault },
 };
 </script>
