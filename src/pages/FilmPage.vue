@@ -27,7 +27,7 @@
                     @click="openVideo(film.name)"
                 >
                     <img
-                        :src="`/src/assets/img/${film.name}.jpg`"
+                        :src="`img/${film.name}.jpg`"
                         class="filmLogo"
                         alt="film-logo"
                     />
@@ -50,7 +50,7 @@ export default {
     data() {
         return {
             needVideo:         false,
-            defaultBackground: `url('/src/assets/img/MainBackground.jpg')`,
+            defaultBackground: `url('img/MainBackground.jpg')`,
             activeFilm:        '',
             films:             [
                 {
@@ -105,7 +105,7 @@ export default {
         
         changeBackground(element) {
             const layout = document.getElementById('main-layout');
-            layout.style.backgroundImage = `url('/src/assets/img/${ element.name }.jpg')`;
+            layout.style.backgroundImage = `url('img/${ element.name }.jpg')`;
         },
         
         openVideo(name) {
@@ -113,7 +113,7 @@ export default {
             this.changeBackground({ name });
             const { filmLink } = this.films.find(film => film.name === name);
             this.needVideo = true;
-            this.defaultBackground = `url('/src/assets/img/${ name }.jpg')`;
+            this.defaultBackground = `url('img/${ name }.jpg')`;
             const player = document.getElementById('video');
             player.src = filmLink;
         },
