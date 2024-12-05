@@ -9,7 +9,7 @@
                     class="col-6 layoutLogo"
                     @click="redirect('film')"
                 >
-                    HP
+                    <p>HP</p>
                 </div>
                 <q-tabs
                     :model-value="route.name"

@@ -12,19 +12,29 @@
     <FooterDefault>
         <div>
             <q-tabs
-                class="full-width"
+                class="full-width q-ma-lg"
                 @update:model-value="openVideo"
                 outside-arrows
+                mobile-arrows
             >
-                <q-tab
-                    v-for="(film, ind) in films"
-                    :key="ind"
-                    v-bind="film"
+                <div
+                    v-for="film in films"
+                    :key="film.name"
                     class="q-ma-md filmTabs"
+                    :class="{ active: film.name === activeFilm }"
                     @mouseover="changeBackground(film)"
                     @mouseleave="backgroundDefault"
+                    @click="openVideo(film.name)"
                 >
-                </q-tab>
+                    <img
+                        :src="`/src/assets/img/${film.name}.jpg`"
+                        class="filmLogo"
+                        alt="film-logo"
+                    />
+                    <q-tab
+                        v-bind="film"
+                    />
+                </div>
             </q-tabs>
         </div>
     </FooterDefault>
@@ -40,6 +50,7 @@ export default {
         return {
             needVideo:         false,
             defaultBackground: `url('/src/assets/img/MainBackground.jpg')`,
+            activeFilm:        '',
             films:             [
                 {
                     name:     'HP1',
@@ -97,6 +108,7 @@ export default {
         },
         
         openVideo(name) {
+            this.activeFilm = name;
             this.changeBackground({ name });
             const { filmLink } = this.films.find(film => film.name === name);
             this.needVideo = true;
