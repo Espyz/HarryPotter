@@ -32,6 +32,7 @@
                         alt="film-logo"
                     />
                     <q-tab
+                        class="film-label"
                         v-bind="film"
                     />
                 </div>
