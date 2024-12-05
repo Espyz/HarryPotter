@@ -56,42 +56,42 @@ export default {
                 {
                     name:     'HP1',
                     label:    'Гарри Поттер и Философский камень',
-                    filmLink: 'https://api.embr.ws/embed/movie/383',
+                    filmLink: 'https://looking.as.newplayjj.com:9443/?token_movie=c1e0e2f4b897656d8566e5da785eb1&token=5af6e7af5ffb19f2ddb300d28d90f8',
                 },
                 {
                     name:     'HP2',
                     label:    'Гарри Поттер и Тайная комната',
-                    filmLink: 'https://api.embr.ws/embed/movie/384',
+                    filmLink: 'https://looking.as.newplayjj.com:9443/?token_movie=bfb5dd5140762af90ad365f668ee00&token=5af6e7af5ffb19f2ddb300d28d90f8',
                 },
                 {
                     name:     'HP3',
                     label:    'Гарри Поттер и узник Азкабана',
-                    filmLink: 'https://api.embr.ws/embed/movie/385',
+                    filmLink: 'https://looking.as.newplayjj.com:9443/?token_movie=f2a636811a7351000250d5af7e3fce&token=5af6e7af5ffb19f2ddb300d28d90f8',
                 },
                 {
                     name:     'HP4',
                     label:    'Гарри Поттер и Кубок огня',
-                    filmLink: 'https://api.embr.ws/embed/movie/386',
+                    filmLink: 'https://looking.as.newplayjj.com:9443/?token_movie=90266f44c44ac4d45d326746e30dab&token=5af6e7af5ffb19f2ddb300d28d90f8',
                 },
                 {
                     name:     'HP5',
                     label:    'Гарри Поттер и Орден Феникса',
-                    filmLink: 'https://api.embr.ws/embed/movie/387',
+                    filmLink: 'https://looking.as.newplayjj.com:9443/?token_movie=226f526b5209ee41eccd97cf13cfe9&token=5af6e7af5ffb19f2ddb300d28d90f8',
                 },
                 {
                     name:     'HP6',
                     label:    'Гарри Поттер и Принц-полукровка',
-                    filmLink: 'https://api.embr.ws/embed/movie/388',
+                    filmLink: 'https://looking.as.newplayjj.com:9443/?token_movie=8fd76c16ddd26766ccca976e0a5f29&token=5af6e7af5ffb19f2ddb300d28d90f8',
                 },
                 {
                     name:     'HP7Part1',
                     label:    'Гарри Поттер и Дары смерти. Часть 1',
-                    filmLink: 'https://api.embr.ws/embed/movie/389',
+                    filmLink: 'https://looking.as.newplayjj.com:9443/?token_movie=766dcc609c1f465a0dac24adc6b1f1&token=5af6e7af5ffb19f2ddb300d28d90f8',
                 },
                 {
                     name:     'HP7Part2',
                     label:    'Гарри Поттер и Дары смерти. Часть 2',
-                    filmLink: 'https://api.embr.ws/embed/movie/390',
+                    filmLink: 'https://looking.as.newplayjj.com:9443/?token_movie=f58499b74b6ac6451dbdc15f2bb760&token=5af6e7af5ffb19f2ddb300d28d90f8',
                 },
             ],
         };

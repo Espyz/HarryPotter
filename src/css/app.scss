@@ -28,7 +28,7 @@
 
 .layoutLogo p {
     cursor: pointer;
-    width: max-content;
+    width:  max-content;
 }
 
 .layoutTabs {
@@ -53,7 +53,11 @@ footer {
     font-family:     'Actor', serif;
     color:           white;
     font-size:       12px;
-    text-decoration: underline solid;
+    padding-right:   60px;
+}
+
+.underline {
+    text-decoration: underline;
 }
 
 .q-tab > .q-tab__indicator {
@@ -72,7 +76,7 @@ footer {
 }
 
 .footer {
-    background-color: rgba(black, 0.4);
+    background-color: rgba(black, 0.75);
 }
 
 .filmTabs {
@@ -100,5 +104,20 @@ footer {
 
 .filmLogo {
     min-width: 200px;
-    width: 100%;
+    width:     100%;
+}
+
+.info-container {
+    display: block;
+    height:  calc(100% - 150px);
+}
+
+.info-content {
+    font-family:    Actor, serif;
+    font-size:      22px;
+    color:          white;
+    line-height:    26.47px;
+    margin:         35px;
+    padding-right:  60px;
+    letter-spacing: 1px;
 }
