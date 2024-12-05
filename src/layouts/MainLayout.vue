@@ -1,5 +1,8 @@
 <template>
-    <q-layout class="main-layout">
+    <q-layout
+        class="main-layout"
+        id="main-layout"
+    >
         <div class="layout-container">
             <div class="row full-width">
                 <div
@@ -25,9 +28,11 @@
                 </q-tabs>
             </div>
         </div>
-        <q-page-container>
-            <router-view/>
-        </q-page-container>
+        <div class="page-container">
+            <q-page-container>
+                <router-view/>
+            </q-page-container>
+        </div>
     </q-layout>
 </template>
 

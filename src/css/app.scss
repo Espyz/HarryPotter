@@ -41,15 +41,46 @@
 .main-layout {
     background-image: url("../assets/img/MainBackground.jpg");
     background-size:  cover;
+    transition:       600ms;
 }
 
 footer {
-    font-family: 'Actor', serif;
-    color:       white;
-    font-size:   12px;
+    font-family:     'Actor', serif;
+    color:           white;
+    font-size:       12px;
     text-decoration: underline solid;
 }
 
 .q-tab > .q-tab__indicator {
     display: none
+}
+
+.q-page-container {
+    height: 60vh;
+    width:  60vw;
+}
+
+.page-container {
+    display:         flex;
+    justify-content: center;
+    align-items:     center;
+}
+
+.footer {
+    background-color: rgba(black, 40%);
+}
+
+.filmTabs {
+    max-height: 38px;
+}
+
+.filmTabs .q-tab__label {
+    font-family: 'Actor', serif;
+    color:       #D9C279;
+    font-size:   16px;
+    max-width:   200px;
+    white-space: pre-wrap;
+    text-transform: none;
+    line-height: 19.25px;
+    max-height: 38px;
 }
