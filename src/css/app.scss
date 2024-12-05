@@ -50,10 +50,10 @@
 }
 
 footer {
-    font-family:     'Actor', serif;
-    color:           white;
-    font-size:       12px;
-    padding-right:   60px;
+    font-family:   'Actor', serif;
+    color:         white;
+    font-size:     12px;
+    padding-right: 60px;
 }
 
 .underline {
@@ -77,6 +77,13 @@ footer {
 
 .footer {
     background-color: rgba(black, 0.75);
+}
+
+.bottom {
+    position: relative;
+    bottom:   0;
+    left:     0;
+    right:    0;
 }
 
 .filmTabs {

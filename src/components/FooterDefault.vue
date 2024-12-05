@@ -1,7 +1,7 @@
 <template>
     <div class="absolute-bottom footer">
         <slot/>
-        <footer class="q-ma-lg absolute-bottom">
+        <footer class="q-ma-lg bottom">
             Все материалы расположенные на сайте не являются публичной офертой или призывом к действию. Все товарные знаки принадлежат их законным владельцам. Данный ресурс носит исключительно информационно-ознакомительный характер, и не является
             официальным продуктом компании. Обратная связь с проектом: <a class="underline">anthony.web.projects@gmail.com</a>
         </footer>
