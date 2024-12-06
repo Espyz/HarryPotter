@@ -9,10 +9,10 @@
         height="100%"
         style="border:none;width:100%;height:100%;"
     ></iframe>
-    <FooterDefault>
+    <FooterDefault class="z-min">
         <div>
             <q-tabs
-                class="full-width q-ma-lg filmTabsContainer"
+                class="filmTabsContainer"
                 @update:model-value="openVideo"
                 outside-arrows
                 mobile-arrows

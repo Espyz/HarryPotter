@@ -65,8 +65,19 @@ footer {
 }
 
 .q-page-container {
-    height: 50vh;
-    width:  50vw;
+    height:  50vh;
+    width:   50vw;
+    z-index: 3;
+}
+
+.z-min {
+    z-index: -1;
+}
+
+@media (max-width: 1200px) {
+    .q-page-container {
+        width: 80vw
+    }
 }
 
 .page-container {
@@ -87,7 +98,7 @@ footer {
 }
 
 .filmTabsContainer {
-    margin-bottom: 60px;
+    margin: 20px 30px 80px 60px;
 }
 
 .filmTabs {
@@ -217,4 +228,25 @@ footer {
 
 .h-inherit {
     height: inherit;
+}
+
+
+@media (max-height: 801px) {
+    .q-page-container {
+        height: 40vh;
+        width:  40vw;
+    }
+
+    .filmTabs {
+        max-height: 100px !important;
+    }
+
+    .filmLogo {
+        min-width: 120px !important;
+    }
+
+    .filmTabs .q-tab__label {
+        font-size:   8px;
+        line-height: 9.5px
+    }
 }
