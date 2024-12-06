@@ -4,16 +4,22 @@
         id="main-layout"
     >
         <div class="layout-container">
-            <div class="row full-width">
+            <div class="row full-width items-center">
                 <div
                     class="col-6 layoutLogo"
                     @click="redirect('film')"
                 >
-                    <p>HP</p>
+                    <div>HP</div>
+                </div>
+                <div class="col-6 burger-container">
+                    <q-icon
+                        class="burger"
+                        name="menu"
+                    />
                 </div>
                 <q-tabs
                     :model-value="route.name"
-                    class="col-6"
+                    class="col-6 pageSwapper"
                     align="right"
                     active-class="layoutTabs-active"
                     @update:model-value="redirect"

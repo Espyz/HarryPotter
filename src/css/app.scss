@@ -74,12 +74,6 @@ footer {
     z-index: -1;
 }
 
-@media (max-width: 1200px) {
-    .q-page-container {
-        width: 80vw
-    }
-}
-
 .page-container {
     display:         flex;
     justify-content: center;
@@ -228,6 +222,51 @@ footer {
 
 .h-inherit {
     height: inherit;
+}
+
+
+@media (max-width: 1200px) {
+    .q-page-container {
+        width: 80vw
+    }
+
+    .info-film-tab .q-tab__label {
+        font-size:   14px;
+        line-height: 17px
+    }
+}
+
+@media (max-width: 1050px) {
+    .info-film-tab .q-tab__label {
+        font-size:   11px;
+        line-height: 13px;
+        padding: 0;
+    }
+}
+
+.burger-container {
+    display: none;
+}
+
+.burger {
+    display: none;
+}
+
+@media (max-width:820px) {
+    .burger-container {
+        display: flex;
+        justify-content: right;
+    }
+
+    .burger {
+        display: block;
+        color: #D9C279;
+        font-size: 36px;
+    };
+
+    .pageSwapper {
+        display: none;
+    }
 }
 
 
