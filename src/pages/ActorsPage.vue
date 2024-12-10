@@ -1,23 +1,46 @@
 <template>
-    <FooterDefault class="info-container">
-        <div
-            v-for="(actor, ind) in actors"
-            :key="ind"
-            class="row q-pa-md"
-        >
-            <div class="col-3 photo-container">
-                <img
-                    :src="actor.photo"
-                    :alt="actor.name"
-                    class="actor-photo"
-                >
+    <template v-if="$q.screen.width > 820">
+        <FooterDefault class="info-container">
+            <div
+                v-for="(actor, ind) in actors"
+                :key="ind"
+                class="row q-pa-md"
+            >
+                <div class="col-3 photo-container">
+                    <img
+                        :src="actor.photo"
+                        :alt="actor.name"
+                        class="actor-photo"
+                    >
+                </div>
+                <div class="col-8 info-actor">
+                    {{ actor.info }}
+                </div>
             </div>
-            <div class="col-8 info-actor">
-                {{ actor.info }}
+            <BackToMain/>
+        </FooterDefault>
+    </template>
+    <template v-else>
+        <div style="padding-bottom: 180px">
+            <div
+                v-for="(actor, ind) in actors"
+                :key="ind"
+                class="q-pa-md"
+            >
+                <div class="photo-container">
+                    <img
+                        :src="actor.photo"
+                        :alt="actor.name"
+                        class="actor-photo"
+                    >
+                </div>
+                <div class="info-actor">
+                    {{ actor.info }}
+                </div>
             </div>
         </div>
-        <BackToMain/>
-    </FooterDefault>
+        <FooterDefault/>
+    </template>
 </template>
 <script>
 import FooterDefault from '../components/FooterDefault.vue';

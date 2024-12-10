@@ -358,6 +358,18 @@ footer {
     .back-button-container {
         position: static;
     }
+
+    .photo-container {
+         justify-content: center;
+         align-content:   center;
+         padding-right:   0;
+     }
+
+    .info-actor {
+        padding-right: 0;
+        font-size:      max(2.7vw, 16px);
+        line-height:    max(3.2vw, 19.25px);
+    }
 }
 
 
