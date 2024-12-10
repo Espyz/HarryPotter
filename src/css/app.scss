@@ -26,11 +26,11 @@
 
 .burger-menu {
     background-color: black;
-    min-height: 100vh;
+    min-height:       100vh;
 }
 
 .burger-menu > .row {
-    padding:          35px;
+    padding: 35px;
 }
 
 .layoutLogo {
@@ -38,6 +38,7 @@
     font-size:   36px;
     width:       max-content;
     color:       #D9C279;
+    cursor:      pointer;
 }
 
 .layoutLogo p {
@@ -67,7 +68,7 @@ footer {
     font-family:   'Actor', serif;
     color:         white;
     font-size:     12px;
-    line-height: 14.44px;
+    line-height:   14.44px;
     padding-right: 60px;
 }
 
@@ -144,7 +145,7 @@ footer {
 }
 
 .info-container.else {
-    display: block;
+    display:       block;
     margin-bottom: 200px;
 }
 
@@ -211,6 +212,14 @@ footer {
     letter-spacing: 1px;
 }
 
+.next-film {
+    font-family: Actor, serif;
+    font-size:   18px;
+    color:       white;
+    line-height: 21.65px;
+    margin:      31px 0;
+}
+
 .info-table {
     font-family:    Actor, serif;
     font-size:      18px;
@@ -257,11 +266,11 @@ footer {
 }
 
 .arrow-back {
-    color: #D9C279;
+    color:       #D9C279;
     margin-left: min(3.7vw, 30px);
-    font-size: 30px;
-    width: 10%;
-    cursor: pointer;
+    font-size:   30px;
+    width:       10%;
+    cursor:      pointer;
 }
 
 .low-logo {
@@ -269,10 +278,74 @@ footer {
 }
 
 .container {
-    display: flex;
+    display:         flex;
     justify-content: center;
-    width: 80%;
+    width:           80%;
 }
+
+.grid {
+    display:               grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr))
+}
+
+.filmCard {
+    margin:         16px 0;
+    height:         223px;
+    display:        flex;
+    flex-direction: column;
+    align-items:    center;
+    cursor:         pointer;
+}
+
+.filmCard:hover {
+    border: 1px solid #D9C279;
+}
+
+.filmCardLogo {
+    width:  110px;
+    height: 170px;
+}
+
+.film-label {
+    font-family:    'Actor', serif;
+    color:          #D9C279;
+    font-size:      16px;
+    max-width:      200px;
+    white-space:    pre-wrap;
+    text-transform: none;
+    line-height:    19.25px;
+    max-height:     38px;
+    text-align:     center;
+    padding-top:    10px;
+}
+
+.mob-film-name {
+    font-family:    'Actor', serif;
+    color:          #D9C279;
+    font-size:      22px;
+    white-space:    pre-wrap;
+    text-transform: none;
+    line-height:    26.47px;
+    max-height:     38px;
+    text-align:     center;
+    padding:        10px 0 100px 0;
+}
+
+#layout {
+    background-size: 100% 180px;
+}
+
+.back-main {
+    width: 100%;
+    font-family: 'Actor', serif;
+    color: #D9C279;
+    font-size: 16px;
+    line-height: 19.25px;
+    margin-top: 31px;
+    text-align: center;
+    cursor: pointer;
+}
+
 
 @media (max-width: 1200px) {
     .q-page-container {
@@ -321,12 +394,12 @@ footer {
     }
 
     .page-container {
-        width: 100%;
+        width:  100%;
         height: 100%;
     }
 
     .q-page-container {
-        width: 100%;
+        width:  100%;
         height: 100%;
     }
 
@@ -360,15 +433,56 @@ footer {
     }
 
     .photo-container {
-         justify-content: center;
-         align-content:   center;
-         padding-right:   0;
-     }
+        justify-content: center;
+        align-content:   center;
+        padding-right:   0;
+    }
 
     .info-actor {
         padding-right: 0;
-        font-size:      max(2.7vw, 16px);
-        line-height:    max(3.2vw, 19.25px);
+        font-size:     max(2.7vw, 16px);
+        line-height:   max(3.2vw, 19.25px);
+    }
+
+    #layout.active {
+        height:     180px;
+        margin-top: 0;
+    }
+
+    .bg-Main {
+        background-image: url("src/assets/img/MainBackground.jpg");
+    }
+
+    .bg-HP1 {
+        background-image: url("src/assets/img/HP1.jpg");
+    }
+
+    .bg-HP2 {
+        background-image: url("src/assets/img/HP2.jpg");
+    }
+
+    .bg-HP3 {
+        background-image: url("src/assets/img/HP3.jpg");
+    }
+
+    .bg-HP4 {
+        background-image: url("src/assets/img/HP4.jpg");
+    }
+
+    .bg-HP5 {
+        background-image: url("src/assets/img/HP5.jpg");
+    }
+
+    .bg-HP6 {
+        background-image: url("src/assets/img/HP6.jpg");
+    }
+
+    .bg-HP7Part1 {
+        background-image: url("src/assets/img/HP7Part1.jpg");
+    }
+
+    .bg-HP7Part2 {
+        background-image: url("src/assets/img/HP7Part2.jpg");
     }
 }
 

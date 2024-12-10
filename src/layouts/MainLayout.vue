@@ -5,7 +5,7 @@
     >
         <template v-if="!burgerActive || $q.screen.width > 820">
             <div class="layout-container">
-                <div class="row full-width items-center">
+                <div class="row full-width items-center" id="layout">
                     <div
                         class="col-6 layoutLogo"
                         @click="redirect('film')"
