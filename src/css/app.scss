@@ -524,24 +524,3 @@ footer {
         background-image: url("src/assets/img/HP7Part2.jpg");
     }
 }
-
-
-@media (max-height: 801px) {
-    .q-page-container {
-        height: 40vh;
-        width:  40vw;
-    }
-
-    .filmTabs {
-        max-height: 100px !important;
-    }
-
-    .filmLogo {
-        min-width: 120px !important;
-    }
-
-    .filmTabs .q-tab__label {
-        font-size:   8px;
-        line-height: 9.5px
-    }
-}
