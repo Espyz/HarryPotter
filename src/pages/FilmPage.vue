@@ -120,7 +120,7 @@ export default {
     data() {
         return {
             needVideo:         false,
-            defaultBackground: `url('img/MainBackground.jpg')`,
+            defaultBackground: 'bg-Main',
             activeFilm:        '',
             activeFilmId:      0,
             films:             [
@@ -173,7 +173,7 @@ export default {
                     id:       7,
                 },
             ],
-            bgClassList:       [ 'bg-HP1', 'bg-HP2', 'bg-HP3', 'bg-HP4', 'bg-HP5', 'bg-HP6', 'bg-HP7Part1', 'bg-HP7Part2' ],
+            bgClassList:       [ 'bg-Main', 'bg-HP1', 'bg-HP2', 'bg-HP3', 'bg-HP4', 'bg-HP5', 'bg-HP6', 'bg-HP7Part1', 'bg-HP7Part2' ],
         };
     },
     
@@ -181,14 +181,23 @@ export default {
         backgroundDefault() {
             if (this.$q.screen.width > 820) {
                 const layout = document.getElementById('main-layout');
-                layout.style.backgroundImage = this.defaultBackground;
+                for (const _class of this.bgClassList) {
+                    layout.classList.remove(_class);
+                }
+                
+                layout.classList.add(this.defaultBackground);
             }
         },
         
         changeBackground(element) {
             if (this.$q.screen.width > 820) {
                 const layout = document.getElementById('main-layout');
-                layout.style.backgroundImage = `url('img/${ element.name }.jpg')`;
+                
+                for (const _class of this.bgClassList) {
+                    layout.classList.remove(_class);
+                }
+                
+                layout.classList.add('bg-' + element.name);
             }
             else {
                 const layout = document.getElementById('layout');

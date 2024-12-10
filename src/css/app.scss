@@ -336,16 +336,54 @@ footer {
 }
 
 .back-main {
-    width: 100%;
+    width:       100%;
     font-family: 'Actor', serif;
-    color: #D9C279;
-    font-size: 16px;
+    color:       #D9C279;
+    font-size:   16px;
     line-height: 19.25px;
-    margin-top: 31px;
-    text-align: center;
-    cursor: pointer;
+    margin-top:  31px;
+    text-align:  center;
+    cursor:      pointer;
 }
 
+
+@media (min-width: 820px) {
+    #main-layout.bg-Main {
+        background-image: url("src/assets/img/MainBackground.jpg");
+    }
+
+    #main-layout.bg-HP1 {
+        background-image: url("src/assets/img/HP1.jpg");
+    }
+
+    #main-layout.bg-HP2 {
+        background-image: url("src/assets/img/HP2.jpg");
+    }
+
+    #main-layout.bg-HP3 {
+        background-image: url("src/assets/img/HP3.jpg");
+    }
+
+    #main-layout.bg-HP4 {
+        background-image: url("src/assets/img/HP4.jpg");
+    }
+
+    #main-layout.bg-HP5 {
+        background-image: url("src/assets/img/HP5.jpg");
+    }
+
+    #main-layout.bg-HP6 {
+        background-image: url("src/assets/img/HP6.jpg");
+    }
+
+    #main-layout.bg-HP7Part1 {
+        background-image: url("src/assets/img/HP7Part1.jpg");
+    }
+
+    #main-layout.bg-HP7Part2 {
+        background-image: url("src/assets/img/HP7Part2.jpg");
+    }
+}
 
 @media (max-width: 1200px) {
     .q-page-container {
@@ -444,44 +482,45 @@ footer {
         line-height:   max(3.2vw, 19.25px);
     }
 
-    #layout.active {
+    #layout{
         height:     180px;
         margin-top: 0;
-    }
-
-    .bg-Main {
         background-image: url("src/assets/img/MainBackground.jpg");
     }
 
-    .bg-HP1 {
+    #layout.bg-Main {
+        background-image: url("src/assets/img/MainBackground.jpg");
+    }
+
+    #layout.bg-HP1 {
         background-image: url("src/assets/img/HP1.jpg");
     }
 
-    .bg-HP2 {
+    #layout.bg-HP2 {
         background-image: url("src/assets/img/HP2.jpg");
     }
 
-    .bg-HP3 {
+    #layout.bg-HP3 {
         background-image: url("src/assets/img/HP3.jpg");
     }
 
-    .bg-HP4 {
+    #layout.bg-HP4 {
         background-image: url("src/assets/img/HP4.jpg");
     }
 
-    .bg-HP5 {
+    #layout.bg-HP5 {
         background-image: url("src/assets/img/HP5.jpg");
     }
 
-    .bg-HP6 {
+    #layout.bg-HP6 {
         background-image: url("src/assets/img/HP6.jpg");
     }
 
-    .bg-HP7Part1 {
+    #layout.bg-HP7Part1 {
         background-image: url("src/assets/img/HP7Part1.jpg");
     }
 
-    .bg-HP7Part2 {
+    #layout.bg-HP7Part2 {
         background-image: url("src/assets/img/HP7Part2.jpg");
     }
 }
