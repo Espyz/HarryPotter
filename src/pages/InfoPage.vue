@@ -1,54 +1,110 @@
 <template>
-    <FooterDefault class="info-container">
-        <div class="row">
-            <div class="col-3"></div>
-            <div class="col-8 flex justify-center header">Описание</div>
-        </div>
-        <div class="row h-inherit">
-            <q-tabs
-                class="col-3"
-                vertical
-                @update:model-value="selectFilm"
-            >
-                <q-tab
+    <template v-if="$q.screen.width > 820">
+        <FooterDefault class="info-container">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-8 flex justify-center header">Описание</div>
+            </div>
+            <div class="row h-inherit">
+                <q-tabs
+                    class="col-3"
+                    vertical
+                    @update:model-value="selectFilm"
+                >
+                    <q-tab
+                        v-for="film in films"
+                        :key="film.name"
+                        v-bind="film"
+                        class="info-film-tab"
+                        :class="{ active: film.name === activeFilm }"
+                    />
+                </q-tabs>
+                <template
                     v-for="film in films"
                     :key="film.name"
-                    v-bind="film"
-                    class="info-film-tab"
-                    :class="{ active: film.name === activeFilm }"
-                />
-            </q-tabs>
-            <template
-                v-for="film in films"
-                :key="film.name"
-            >
-                <div
-                    v-if="film.name === activeFilm"
-                    class="info-table col-9"
                 >
-                    <div class="row">
-                        <div class="col-6">{{ film.info.name }}</div>
-                        <div class="col-6">{{ film.info.year }}</div>
+                    <div
+                        v-if="film.name === activeFilm"
+                        class="info-table col-9"
+                    >
+                        <div class="row">
+                            <div class="col-6">{{ film.info.name }}</div>
+                            <div class="col-6">{{ film.info.year }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">Перевод: {{ film.info.language }}</div>
+                            <div class="col-6">Качество: {{ film.info.quality }}</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">Страна: {{ film.info.country }}</div>
+                            <div class="col-6">{{ film.info.director }}</div>
+                        </div>
+                        <div class="row">
+                            {{ film.info.actors }}
+                        </div>
+                        <div class="row">
+                            {{ film.info.info }}
+                        </div>
                     </div>
-                    <div class="row">
-                        <div class="col-6">Перевод: {{ film.info.language }}</div>
-                        <div class="col-6">Качество: {{ film.info.quality }}</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">Страна: {{ film.info.country }}</div>
-                        <div class="col-6">{{ film.info.director }}</div>
-                    </div>
-                    <div class="row">
-                        {{ film.info.actors }}
-                    </div>
-                    <div class="row">
-                        {{ film.info.info }}
-                    </div>
+                </template>
+            </div>
+            <BackToMain/>
+        </FooterDefault>
+    </template>
+    <template v-else>
+        <div class="bg-black full-height">
+            <template v-if="activeFilm === ''">
+                <div class="flex justify-center header">Информация о фильмах</div>
+                <q-tabs
+                    vertical
+                    @update:model-value="selectFilm"
+                >
+                    <q-tab
+                        v-for="film in films"
+                        :key="film.name"
+                        v-bind="film"
+                        class="info-film-tab"
+                        :class="{ active: film.name === activeFilm }"
+                    />
+                </q-tabs>
+            </template>
+            <template v-else>
+                <div style="padding-bottom: 180px">
+                    <template
+                        v-for="film in films"
+                        :key="film.name"
+                    >
+                        <div
+                            v-if="film.name === activeFilm"
+                            class="info-table"
+                        >
+                            <div class="row items-center">
+                                <q-icon
+                                    class="arrow-back"
+                                    name="arrow_back_ios"
+                                />
+                                <div class="container">
+                                    <div class="info-film-tab active low-logo">
+                                        {{ film.name }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex justify-center q-ma-lg header">Описание</div>
+                            <div class="text">{{ film.info.name }}</div>
+                            <div class="text">{{ film.info.year }}</div>
+                            <div class="text">Перевод: {{ film.info.language }}</div>
+                            <div class="text">Качество: {{ film.info.quality }}</div>
+                            <div class="text">Страна: {{ film.info.country }}</div>
+                            <div class="text">{{ film.info.director }}</div>
+                            <div class="text">{{ film.info.actors }}</div>
+                            <div class="text">{{ film.info.info }}</div>
+                        </div>
+                    </template>
                 </div>
             </template>
+            <FooterDefault/>
         </div>
-        <BackToMain/>
-    </FooterDefault>
+    </template>
 </template>
 
 <script>
@@ -59,7 +115,7 @@ export default {
     components: { BackToMain, FooterDefault },
     data() {
         return {
-            activeFilm: 'Гарри Поттер и Философский камень',
+            activeFilm: '',
             films:      [
                 {
                     name:  'Гарри Поттер и Философский камень',
@@ -187,8 +243,20 @@ export default {
     methods: {
         selectFilm(name) {
             this.activeFilm = name;
-            console.log(name);
         },
+        
+        defaultFilm() {
+            if (this.$q.screen.width > 820) {
+                this.activeFilm = 'Гарри Поттер и Философский камень';
+            }
+            else {
+                this.activeFilm = '';
+            }
+        },
+    },
+    
+    async created() {
+        this.defaultFilm();
     },
 };
 </script>
