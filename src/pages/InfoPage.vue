@@ -82,6 +82,7 @@
                                 <q-icon
                                     class="arrow-back"
                                     name="arrow_back_ios"
+                                    @click="closeDetails"
                                 />
                                 <div class="container">
                                     <div class="info-film-tab active low-logo">
@@ -243,6 +244,10 @@ export default {
     methods: {
         selectFilm(name) {
             this.activeFilm = name;
+        },
+        
+        closeDetails() {
+            this.activeFilm = '';
         },
         
         defaultFilm() {

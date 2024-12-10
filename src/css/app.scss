@@ -253,9 +253,10 @@ footer {
 
 .arrow-back {
     color: #D9C279;
-    margin-left: 30px;
+    margin-left: min(3.7vw, 30px);
     font-size: 30px;
     width: 10%;
+    cursor: pointer;
 }
 
 .low-logo {
