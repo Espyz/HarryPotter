@@ -1,7 +1,7 @@
 <template>
     <template v-if="$q.screen.width > 820">
-        <FooterDefault class="info-container">
-            <div class="row">
+        <div class="bg-black-semi relative-position">
+            <div class="row q-pa-lg">
                 <div class="col-3"></div>
                 <div class="col-8 flex justify-center header">Описание</div>
             </div>
@@ -48,8 +48,8 @@
                     </div>
                 </template>
             </div>
-            <BackToMain/>
-        </FooterDefault>
+            <BackToMain class="absolute-bottom"/>
+        </div>
     </template>
     <template v-else>
         <div class="bg-black full-height">
@@ -69,7 +69,7 @@
                 </q-tabs>
             </template>
             <template v-else>
-                <div style="padding-bottom: 180px">
+                <div>
                     <template
                         v-for="film in films"
                         :key="film.name"
@@ -103,17 +103,16 @@
                     </template>
                 </div>
             </template>
-            <FooterDefault/>
         </div>
     </template>
 </template>
 
 <script>
-import FooterDefault from '../components/FooterDefault.vue';
+// import FooterDefault from '../components/FooterDefault.vue';
 import BackToMain from '../components/BackToMain.vue';
 
 export default {
-    components: { BackToMain, FooterDefault },
+    components: { BackToMain },
     data() {
         return {
             activeFilm: '',

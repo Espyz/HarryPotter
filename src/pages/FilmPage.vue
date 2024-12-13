@@ -1,48 +1,48 @@
 <template>
     <template v-if="$q.screen.width > 820">
-        <iframe
-            id="video"
-            v-show="needVideo"
-            title="Плеер 1"
-            allow="autoplay *"
-            allowfullscreen=""
-            width="100%"
-            height="100%"
-            style="border:none;width:100%;height:100%;"
-        ></iframe>
-        <FooterDefault class="z-min">
-            <div>
-                <q-tabs
-                    class="filmTabsContainer"
-                    @update:model-value="openVideo"
-                    outside-arrows
-                    mobile-arrows
+        <div class="video-container">
+            <iframe
+                id="video"
+                v-show="needVideo"
+                title="Плеер 1"
+                allow="autoplay *"
+                allowfullscreen=""
+                width="50vw"
+                height="100%"
+                style="border:none;width:50vw;height:100%;"
+            ></iframe>
+        </div>
+        <div class="bg-black-semi">
+            <q-tabs
+                class="filmTabsContainer"
+                @update:model-value="openVideo"
+                outside-arrows
+                mobile-arrows
+            >
+                <div
+                    v-for="film in films"
+                    :key="film.name"
+                    class="q-ma-md filmTabs"
+                    :class="{ active: film.name === activeFilm.name }"
+                    @mouseover="changeBackground(film)"
+                    @mouseleave="backgroundDefault"
+                    @click="openVideo(film.name)"
                 >
-                    <div
-                        v-for="film in films"
-                        :key="film.name"
-                        class="q-ma-md filmTabs"
-                        :class="{ active: film.name === activeFilm.name }"
-                        @mouseover="changeBackground(film)"
-                        @mouseleave="backgroundDefault"
-                        @click="openVideo(film.name)"
-                    >
-                        <img
-                            :src="`img/${film.name}.jpg`"
-                            class="filmLogo"
-                            alt="film-logo"
-                        />
-                        <q-tab
-                            class="film-label"
-                            v-bind="film"
-                        />
-                    </div>
-                </q-tabs>
-            </div>
-        </FooterDefault>
+                    <img
+                        :src="`img/${film.name}.jpg`"
+                        class="filmLogo"
+                        alt="film-logo"
+                    />
+                    <q-tab
+                        class="film-label"
+                        v-bind="film"
+                    />
+                </div>
+            </q-tabs>
+        </div>
     </template>
     <template v-else>
-        <div style="padding-bottom: 180px">
+        <div>
             <template v-if="activeFilm === ''">
                 <div class="grid">
                     <div
@@ -107,16 +107,11 @@
                 </div>
             </template>
         </div>
-        <FooterDefault/>
     </template>
 </template>
 
 <script>
-
-import FooterDefault from '../components/FooterDefault.vue';
-
 export default {
-    components: { FooterDefault },
     data() {
         return {
             needVideo:         false,

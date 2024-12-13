@@ -5,7 +5,10 @@
     >
         <template v-if="!burgerActive || $q.screen.width > 820">
             <div class="layout-container">
-                <div class="row full-width items-center" id="layout">
+                <div
+                    class="row full-width items-center"
+                    id="layout"
+                >
                     <div
                         class="col-6 layoutLogo"
                         @click="redirect('film')"
@@ -38,11 +41,14 @@
                     </q-tabs>
                 </div>
             </div>
-            <div class="page-container">
-                <q-page-container>
-                    <router-view/>
-                </q-page-container>
-            </div>
+            <q-page-container class="full-height flex1 flex page-container">
+                <router-view/>
+            </q-page-container>
+            <footer class="footer q-pa-lg">
+                Все материалы расположенные на сайте не являются публичной офертой или призывом к действию. Все товарные знаки принадлежат их законным владельцам. Данный ресурс носит исключительно информационно-ознакомительный характер, и не
+                является
+                официальным продуктом компании. Обратная связь с проектом: <a class="underline">anthony.web.projects@gmail.com</a>
+            </footer>
         </template>
         <template v-else>
             <div class="burger-menu">
@@ -110,7 +116,7 @@ export default {
                     label: 'Музыка',
                 },
             ],
-            pagesBurger: [
+            pagesBurger:  [
                 {
                     name:  'info',
                     label: 'О фильме',

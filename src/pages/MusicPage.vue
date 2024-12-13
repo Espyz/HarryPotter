@@ -1,6 +1,6 @@
 <template>
     <template v-if="$q.screen.width > 820">
-        <FooterDefault class="info-container">
+        <div class="bg-black-semi relative-position">
             <div class="info-content">
                 Проект потребовал привлечения к написанию музыкальных тем к нему нескольких композиторов – Джона Уильямса, Патрика Дойла, Николаса Хупера, Александра Депла – и музыкантов. Среди последних – Джарвис Кокер, Ник Кейв.
                 Помимо восьми саундтреков, сопровождающих каждую из серий фильмов, в проекте нашли достойное место песни
@@ -12,8 +12,8 @@
                     <li>«Weird Sisters – ночная рок-мелодия, под которую танцевали на Святочном балу.</li>
                 </ul>
             </div>
-            <BackToMain/>
-        </FooterDefault>
+            <BackToMain class="absolute-bottom"/>
+        </div>
     </template>
     <template v-else>
         <div class="info-container else">

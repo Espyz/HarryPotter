@@ -58,10 +58,20 @@
     box-shadow: 0.3em 0 .4em #D9C279;
 }
 
+.video-container {
+    display:         flex;
+    justify-content: center;
+    height:          24vw;
+    width: 100%;
+}
+
 .main-layout {
-    background-image: url("src/assets/img/MainBackground.jpg");
-    background-size:  100vw 100vh;
-    transition:       600ms;
+    background-image:      url("src/assets/img/MainBackground.jpg");
+    background-size:       100vw 100vh;
+    transition:            600ms;
+    background-attachment: fixed;
+    display:               flex;
+    flex-direction:        column;
 }
 
 footer {
@@ -70,6 +80,7 @@ footer {
     font-size:     12px;
     line-height:   14.44px;
     padding-right: 60px;
+    z-index:       1000;
 }
 
 .underline {
@@ -80,35 +91,25 @@ footer {
     display: none
 }
 
-.q-page-container {
-    height:  50vh;
-    width:   50vw;
-    z-index: 3;
-}
-
 .z-min {
     z-index: -1;
-}
-
-.page-container {
-    display:         flex;
-    justify-content: center;
-    align-items:     center;
 }
 
 .footer {
     background-color: rgba(black, 0.75);
 }
 
-.bottom {
-    position: inherit;
-    bottom:   0;
-    left:     0;
-    right:    0;
+.flex1 {
+    flex: 1;
 }
 
+.bg-black-semi {
+    background-color: rgba(black, 0.75);
+}
+
+
 .filmTabsContainer {
-    margin: 20px 30px 80px 60px;
+    margin: 0 30px;
 }
 
 .filmTabs {
@@ -154,8 +155,9 @@ footer {
     font-size:      22px;
     color:          white;
     line-height:    26.47px;
-    margin:         35px;
+    margin-left:    35px;
     padding-right:  60px;
+    padding-top:    10px;
     letter-spacing: 1px;
     height:         inherit;
 }
@@ -207,7 +209,6 @@ footer {
     font-size:      22px;
     color:          white;
     line-height:    26.47px;
-    margin-top:     31px;
     padding-right:  60px;
     letter-spacing: 1px;
 }
@@ -236,7 +237,7 @@ footer {
 .back-button-container {
     display:         flex;
     justify-content: right;
-    position:        relative;
+    //position:        relative;
     bottom:          30px;
 }
 
@@ -316,7 +317,6 @@ footer {
     line-height:    19.25px;
     max-height:     38px;
     text-align:     center;
-    padding-top:    10px;
 }
 
 .mob-film-name {
@@ -386,10 +386,6 @@ footer {
 }
 
 @media (max-width: 1200px) {
-    .q-page-container {
-        width: 80vw
-    }
-
     .info-film-tab .q-tab__label {
         font-size:   14px;
         line-height: 17px
@@ -405,6 +401,10 @@ footer {
 }
 
 @media (max-width: 820px) {
+    .page-container {
+        display: block !important;
+    }
+
     .burger-container {
         display:         flex;
         justify-content: right;
@@ -429,11 +429,6 @@ footer {
     .main-layout {
         background-color: black;
         background-image: none;
-    }
-
-    .page-container {
-        width:  100%;
-        height: 100%;
     }
 
     .q-page-container {
@@ -482,9 +477,9 @@ footer {
         line-height:   max(3.2vw, 19.25px);
     }
 
-    #layout{
-        height:     180px;
-        margin-top: 0;
+    #layout {
+        height:           180px;
+        margin-top:       0;
         background-image: url("src/assets/img/MainBackground.jpg");
     }
 
@@ -523,4 +518,23 @@ footer {
     #layout.bg-HP7Part2 {
         background-image: url("src/assets/img/HP7Part2.jpg");
     }
+
+    .film-label {
+        padding-top: 10px;
+    }
 }
+
+//@media (max-height: 801px) and (min-width: 820px) {
+//    .filmTabs {
+//        max-height: 100px !important;
+//    }
+//
+//    .filmLogo {
+//        min-width: 120px !important;
+//    }
+//
+//    .filmTabs .q-tab__label {
+//        font-size:   8px;
+//        line-height: 9.5px
+//    }
+//}

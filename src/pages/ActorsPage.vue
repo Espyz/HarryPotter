@@ -1,6 +1,6 @@
 <template>
     <template v-if="$q.screen.width > 820">
-        <FooterDefault class="info-container">
+        <div class="bg-black-semi relative-position">
             <div
                 v-for="(actor, ind) in actors"
                 :key="ind"
@@ -17,11 +17,11 @@
                     {{ actor.info }}
                 </div>
             </div>
-            <BackToMain/>
-        </FooterDefault>
+            <BackToMain class="absolute-bottom"/>
+        </div>
     </template>
     <template v-else>
-        <div style="padding-bottom: 180px">
+        <div>
             <div
                 v-for="(actor, ind) in actors"
                 :key="ind"
