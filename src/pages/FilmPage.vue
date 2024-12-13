@@ -12,7 +12,7 @@
                 style="border:none;width:50vw;height:100%;"
             ></iframe>
         </div>
-        <div class="bg-black-semi">
+        <div class="bg-black-semi full-width">
             <q-tabs
                 class="filmTabsContainer"
                 @update:model-value="openVideo"
